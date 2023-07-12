@@ -7,3 +7,5 @@ jobs:
  scan:
    name: Scan
    uses: easlank/actions/.github/workflows/reusable-trivy.yml@trivy-branch
+   with:
+     image: 'ghcr.io/easlank/wordsmith-web:latest'
