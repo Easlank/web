@@ -8,7 +8,7 @@ name: Docker Build - Full
 on:
   push:
     branches:
-      - main
+      - master
   pull_request:
 
 # cancel any previously-started, yet still active runs of this workflow on the same branch
