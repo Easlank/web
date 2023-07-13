@@ -1,0 +1,11 @@
+name: Call Trivy
+on:
+ push:
+   branches: [master]
+ pull_request:
+jobs:
+ scan:
+   name: Scan
+   uses: easlank/actions/.github/workflows/reusable-trivy.yml@master
+   with:
+     image: 'ghcr.io/easlank/wordsmith-web:pr-5'
