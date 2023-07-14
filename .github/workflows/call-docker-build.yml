@@ -73,3 +73,10 @@ jobs:
             # platforms: linux/amd64
             
             # comment-enable: true
+
+    scan:
+        name: Scan Image
+        needs: call-docker-build
+        uses: easlank/actions/.github/workflows/reusable-trivy.yml@master
+        with:
+            image: 'ghcr.io/easlank/wordsmith-web:${{ needs.call-docker-build.outputs.image-tag }}'
